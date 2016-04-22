@@ -19,3 +19,18 @@ uiRoutes
   controller: 'elasticsearchDetailController',
   controllerAs: 'ctrl'
 });
+
+uiModules
+.get('app/studios-meme')
+.controller('elasticsearchStatusController', function ($http) {
+  //$http.get('../api/elasticsearch_status/indices').then((response) => {
+  //  this.indices = response.data;
+  //});
+})
+.controller('elasticsearchDetailController', function($routeParams, $http) {
+  this.index = $routeParams.name;
+
+  //$http.get(`../api/elasticsearch_status/index/${this.index}`).then((response) => {
+  //  this.status = response.data;
+  //});
+});
