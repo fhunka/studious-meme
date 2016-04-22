@@ -7,6 +7,8 @@ import './less/main.less';
 import overviewTemplate from './templates/index.html';
 import detailTemplate from './templates/detail.html';
 
+console.log("Import done");
+
 uiRoutes.enable();
 uiRoutes
 .when('/', {
@@ -20,17 +22,26 @@ uiRoutes
   controllerAs: 'ctrl'
 });
 
+console.log("Routes done");
+
 uiModules
 .get('app/studios-meme')
 .controller('elasticsearchStatusController', function ($http) {
   //$http.get('../api/elasticsearch_status/indices').then((response) => {
   //  this.indices = response.data;
   //});
+
+	console.log("elasticsearchStatusController");
+
 })
 .controller('elasticsearchDetailController', function($routeParams, $http) {
   this.index = $routeParams.name;
+
+	console.log("elasticsearchDetailController");
 
   //$http.get(`../api/elasticsearch_status/index/${this.index}`).then((response) => {
   //  this.status = response.data;
   //});
 });
+
+console.log("Modules done");
