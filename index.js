@@ -1,8 +1,8 @@
-import api from './server/routes';
+//import api from './server/routes';
 
 export default function (kibana) {
   return new kibana.Plugin({
-    require: ['elasticsearch'],
+    require: [],
 
     uiExports: {
       // Register the app component of our plugin to uiExports
@@ -12,9 +12,9 @@ export default function (kibana) {
         // An description of the application.
         description: 'An awesome Kibana plugin',
         // The require reference to the JavaScript file for this app
-        main: 'plugins/elasticsearch_status/app',
+        main: 'plugins/studios-meme/app',
         // The require reference to the icon of the app
-        icon: 'plugins/elasticsearch_status/icon.svg'
+        //icon: 'plugins/elasticsearch_status/icon.svg'
       }
     },
 
@@ -23,7 +23,7 @@ export default function (kibana) {
     init(server, options) {
       // Just call the api module that we imported above (the server/routes.js file)
       // and pass the server to it, so it can register several API interfaces at the server.
-      api(server);
+      //api(server);
     }
 
   });
