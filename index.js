@@ -8,11 +8,11 @@ export default function (kibana) {
       // Register the app component of our plugin to uiExports
       app: {
         // The title of the app (will be shown to the user)
-        title: 'Studios Meme',
+        title: 'Studious Meme',
         // An description of the application.
         description: 'An awesome Kibana plugin',
         // The require reference to the JavaScript file for this app
-        main: 'plugins/studios-meme/app',
+        main: 'plugins/studious-meme/app',
         // The require reference to the icon of the app
         //icon: 'plugins/elasticsearch_status/icon.svg'
       }
